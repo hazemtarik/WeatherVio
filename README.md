@@ -7,13 +7,13 @@ WeatherVIO is a weather app based on swift with MVVM design pattern, And built w
 
 
 ### Some Screens from the APP
-<img src="https://github.com/hazemtarik/WeatherVio/blob/master/Docs/Current.png" width="430"/> <img src="https://github.com/hazemtarik/WeatherVio/blob/master/Docs/Light.png" width="430"/>
+<img src="https://github.com/hazemtarik/WeatherVio/blob/master/Docs/Current.png" width="400"/> <img src="https://github.com/hazemtarik/WeatherVio/blob/master/Docs/Light.png" width="400"/>
 
-<img src="https://github.com/hazemtarik/WeatherVio/blob/master/Docs/Cities.png" width="430"/> <img src="https://github.com/hazemtarik/WeatherVio/blob/master/Docs/Search.png" width="430"/>
+<img src="https://github.com/hazemtarik/WeatherVio/blob/master/Docs/Cities.png" width="400"/> <img src="https://github.com/hazemtarik/WeatherVio/blob/master/Docs/Search.png" width="400"/>
 
 you can choose which color would you like 😁
 
-<img src="https://github.com/hazemtarik/WeatherVio/blob/master/Docs/Colors.png" width="430"/>
+<img src="https://github.com/hazemtarik/WeatherVio/blob/master/Docs/Colors.png" width="400"/>
 
 # Features 
 
