@@ -17,6 +17,7 @@ you can choose which color would you like 😁
 
 # Features 
 
+* Supporting dark mode and light mode.
 * Detect current location and the city name.
 * Current Weather basied on the current location.
 * Weather for every hour.
