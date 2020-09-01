@@ -1,4 +1,5 @@
-![Logo](https://github.com/hazemtarik/WeatherVio/blob/master/Docs/Logo.png)
+<img src="https://github.com/hazemtarik/WeatherVio/blob/master/Docs/Logo.png" width="500"/>
+
 ### IOS Weather Application By Swift
 
 # About
