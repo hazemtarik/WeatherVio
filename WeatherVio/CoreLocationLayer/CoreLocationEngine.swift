@@ -51,7 +51,6 @@ class CoreLocationEngine: NSObject, coreLocationEngineProtocol {
     // Configure Location Manager
     private func locationManagerConfigruation() {
         locationManager.delegate = self
-        locationManager.requestLocation()
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationAuthValidation()
     }
