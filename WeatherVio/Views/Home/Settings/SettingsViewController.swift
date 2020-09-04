@@ -14,6 +14,8 @@ class SettingsViewController: UIViewController {
     // MARK: - Variables -
     let colors = ["0", "1", "2", "3", "4", "5", "6", "7"]
     
+    var selectedColorIndex: String?
+    
     
     // MARK: - Outlets -
     @IBOutlet weak var collectionView: UICollectionView!
@@ -37,6 +39,8 @@ class SettingsViewController: UIViewController {
     
     
     @IBAction func saveButtonPressed(_ sender: UIBarButtonItem) {
+        selectedColorIndex = selectedColorIndex == nil ? user_default.color : selectedColorIndex
+        UserDefaults.standard.setValue(selectedColorIndex!, forKey: userDefaultsKeys.color)
         NotificationCenter.default.post(name: NSNotification.Name(rawValue: notificationName.changeColor), object: nil)
         dismiss(animated: true)
     }
@@ -70,7 +74,8 @@ extension SettingsViewController: UICollectionViewDelegate, UICollectionViewData
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let colorCell = collectionView.dequeueReusableCell(withReuseIdentifier: cells.colors, for: indexPath) as! ColorCollectionViewCell
-        colorCell.setupColorView(named: colors[indexPath.row])
+        let selectedColor = selectedColorIndex == nil ? user_default.color : selectedColorIndex
+        colorCell.setupColorView(named: colors[indexPath.row], selectedColor: selectedColor)
         return colorCell
     }
     
@@ -80,7 +85,7 @@ extension SettingsViewController: UICollectionViewDelegate, UICollectionViewData
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        UserDefaults.standard.setValue(colors[indexPath.row], forKey: userDefaultsKeys.color)
+        selectedColorIndex = colors[indexPath.row]
         navigationController?.navigationBar.tintColor = UIColor(named: colors[indexPath.row])
         collectionView.reloadData()
     }
